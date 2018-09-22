@@ -9,6 +9,9 @@
     font-weight: 700;
   }
   .navbar-nav {
+    .dropdown-menu {
+      background-color: red;
+    }
     .nav-item {
       .nav-link {
         text-transform: uppercase;
