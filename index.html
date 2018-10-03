@@ -14,12 +14,17 @@
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+    <!--link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet"-->
+    <!--link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet"-->
 
     <!-- Custom styles for this template -->
     <link href="css/one-page-wonder.min.css" rel="stylesheet">
 
+    <!-- Custom styles for openstreetmap -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin=""/>
+
+    <!-- Custom styles for font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
@@ -626,13 +631,14 @@ J.-D. Combrexelle
     <div class="col-lg-7">
 
       <!--Google map-->
-      <div id="map-container-7" class="z-depth-1-half map-container" style="height: 400px"></div>
+      <!--div id="map-container-7" class="z-depth-1-half map-container" style="height: 400px"></div-->
+      <div id="mapid" style="height: 400px"></div>
 
       <br>
       <!--Buttons-->
       <div class="row text-center">
         <div class="col-md-4">
-          <a class="btn-floating blue accent-1"><i class="fa fa-map-marker"></i></a>
+          <a class="btn-floating blue accent-1"><i class="fa fa-map-marker" style="font-size:96px;color:#ee0979"></i></a>
           <p>San Francisco, CA 94126</p>
           <p>United States</p>
         </div>
@@ -676,22 +682,31 @@ J.-D. Combrexelle
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/google_map.js"></script>
-    <script src="https://maps.google.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <!--script src="js/google_map.js"></script-->
+    <!--script src="https://maps.google.com/maps/api/js?key=YOUR_API_KEY"></script-->
     <script>
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
     });
     </script>
-    <script>
+    <!--script>
     $('.moreBtn').mouseover(function(){
       $(this).css({
         'color' :'red',
         //other styles
       })
     });
+    </script-->
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script> 
+    <script>
+    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox.streets',
+        accessToken: 'pk.eyJ1IjoibWFuYWR0aGFuIiwiYSI6ImNqbXQ3bmpqbDJkaWkzcWs0MnFha2NqMzQifQ.RlyHxBFh71phG1x9Ce94fg'
+    }).addTo(mymap);
     </script>
-    
 
   </body>
 
