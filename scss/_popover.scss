@@ -1,3 +1,5 @@
 .popover{
-    max-width: 100%; /* Max Width of the popover (depending on the container!) */
+    max-width: 30%; /* Max Width of the popover (depending on the container!) */
+    height: 50%;
+    overflow-y: scroll;
 }

@@ -151,6 +151,13 @@ h6 {
   transform: translate3d(0, 0, 0);
 }
 
+.popover {
+  max-width: 30%;
+  /* Max Width of the popover (depending on the container!) */
+  height: 50%;
+  overflow-y: scroll;
+}
+
 header.masthead {
   position: relative;
   overflow: hidden;
@@ -186,24 +193,24 @@ header.masthead .bg-circle {
 }
 
 header.masthead .bg-circle-1 {
-  height: 90rem;
-  width: 90rem;
-  bottom: -55rem;
-  left: -55rem;
+  height: 35rem;
+  width: 35rem;
+  bottom: -5rem;
+  left: -5rem;
 }
 
 header.masthead .bg-circle-2 {
-  height: 50rem;
-  width: 50rem;
-  top: -25rem;
-  right: -25rem;
+  height: 20rem;
+  width: 20rem;
+  top: 5rem;
+  right: 3rem;
 }
 
 header.masthead .bg-circle-3 {
   height: 20rem;
   width: 20rem;
-  bottom: -10rem;
-  right: 5%;
+  bottom: -2rem;
+  right: 10%;
 }
 
 header.masthead .bg-circle-4 {
