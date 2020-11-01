@@ -25,28 +25,16 @@ header.masthead {
     background: linear-gradient(0deg, $primary 0%, $secondary 100%);
   }
   .bg-circle-1 {
-    height: 35rem;
-    width: 35rem;
-    bottom: -5rem;
-    left: -5rem;
+    height: 30rem;
+    width: 30rem;
+    bottom: 5rem;
+    left: 0rem;
   }
   .bg-circle-2 {
     height: 20rem;
     width: 20rem;
     top: 5rem;
     right: 3rem;
-  }
-  .bg-circle-3 {
-    height: 20rem;
-    width: 20rem;
-    bottom: -2rem;
-    right: 10%;
-  }
-  .bg-circle-4 {
-    height: 30rem;
-    width: 30rem;
-    top: -5rem;
-    right: 35%;
   }
 }
 
